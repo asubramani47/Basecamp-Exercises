@@ -1,0 +1,9 @@
+# Feedback
+## Day 1
+Half of that day was spent fighting the corporate Zscaler proxy app, which handles all outgoing TLS/SSL requests and ruins the Anthropic model calls (the Anthropic SDK uses httpx, with strict TLS/SSL certificate chain checks). This was fixed (I even submitted a PR to the Basecamp Exercises repo), and all Jupyter notebooks in the work repo were updated. In the end, I was not able to finalize Day 1 03 Prompt Rescue and 04 Diagnosing AI Problems — the model calls lasted forever. Other participants using MacBooks didn't have such issues (at least from what I saw personally).
+
+## Day 2
+The fix works, but I faced degraded performance in the Day 2 01 and 02 tasks. The 02 Inference Optimization notebook got stuck endlessly on the `run_portfolio` cell. Sometimes restarting the Python engine helped, but it still hung on the `run_portfolio` cell. Teammates around me were having the same issue. The whole team of 5 could not get past Part 3: my teammate waited about 30 minutes for the `run_portfolio` cell to finish, but eventually interrupted their engine and started over. In the end, I was advised to skip the Part 3 `run_portfolio` cell, but skipping this cell dissolves the whole learning lesson of the following Part 4 (which shows how we can improve model speed and efficiency by using different levers like prompt caching, structured output, etc.). Even after skipping Part 3, Part 4 Lever 1 also didn't go well, so as the exercise was coming to an end, I stopped my attempts as well.
+
+## Proposals
+To eliminate the differences between corporate laptop setups, I'd propose using virtual environments or even Anthropic-provided laptops with a curated environment setup, rather than relying on participants' laptops.
